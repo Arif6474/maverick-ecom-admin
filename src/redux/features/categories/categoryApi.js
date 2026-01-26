@@ -17,7 +17,7 @@ export const categoryApi = createApi({
     endpoints: (builder) => ({
         getCategories: builder.query({
             query: ({ search = '', filter, queryParams }) => ({
-                url: '/',
+                url: '/getCategoryWithQuery',
                 params: {
                     search, filter,
                     currentPage: queryParams.currentPage,
@@ -41,7 +41,7 @@ export const categoryApi = createApi({
         }),
         singleCategory: builder.query({
             query: ({ id }) => ({
-                url: `/${id}`,
+                url: `/getSingleCategory/${id}`,
             }),
         }),
         deleteCategory: builder.mutation({

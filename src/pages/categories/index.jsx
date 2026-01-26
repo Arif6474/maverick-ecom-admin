@@ -79,8 +79,8 @@ function Categories() {
                 />
             </ScreenWrapper>
             <ArchiveItem
-                api={'categories/archiveCategory/'}
-                singleItemApi={'categories/getSingleCategory/'}
+                api={'category/archiveCategory/'}
+                singleItemApi={'category/getSingleCategory/'}
                 targetID={targetID}
                 setShowArchiveModal={setShowArchiveModal}
                 showArchiveModal={showArchiveModal}
