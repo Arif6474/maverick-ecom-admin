@@ -64,6 +64,12 @@ const router = createBrowserRouter([
         }),
       },
       {
+        path: 'subcategories/:id',
+        lazy: async () => ({
+          Component: (await import('@/pages/subcategories')).default,
+        }),
+      },
+      {
         path: 'orders',
         lazy: async () => ({
           Component: (await import('@/pages/orders')).default,

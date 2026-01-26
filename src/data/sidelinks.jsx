@@ -44,6 +44,7 @@ export const sidelinks = [
         href: '/categories',
         icon: <IconHexagonNumber2 size={18} />,
       },
+
     ],
   },
   {

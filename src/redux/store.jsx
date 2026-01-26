@@ -11,6 +11,7 @@ import { productSizeApi } from './features/productSizes/productSizeApi';
 import productSizeReducer from './features/productSizes/productSizeSlice';
 import { orderApi } from './features/orders/orderApi';
 import orderReducer from './features/orders/orderSlice';
+import { subcategoryApi } from './features/subcategories/subcategoryApi';
 
 const store = configureStore({
   reducer: {
@@ -26,6 +27,7 @@ const store = configureStore({
     [productSizeApi.reducerPath]: productSizeApi.reducer,
     order: orderReducer,
     [orderApi.reducerPath]: orderApi.reducer,
+    [subcategoryApi.reducerPath]: subcategoryApi.reducer,
 
   },
   middleware: (getDefaultMiddleware) =>
@@ -36,6 +38,7 @@ const store = configureStore({
       productColorApi.middleware,
       productSizeApi.middleware,
       orderApi.middleware,
+      subcategoryApi.middleware,
 
     ),
 });
